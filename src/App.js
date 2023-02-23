@@ -1,24 +1,34 @@
-import logo from './logo.svg';
+
+import React,{useContext} from 'react';
 import './App.css';
 
+import Series from './composant/Series';
+import { Routes,Route } from 'react-router-dom';
+import PagesAccueil from './composant/pagesAccueil'
+import Navbarre from './composant/navbarre';
+import RequetteProvider from './composant/Requette';
+
+
+
 function App() {
+  
+  
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <RequetteProvider>
+        <Navbarre/>
+        <Routes>
+        <Route exact path="/" element={<PagesAccueil/>}/>
+        <Route  path="/Series" element={<Series/>}/>
+        </Routes>
+      </RequetteProvider>
+      
+      
       </header>
+     
     </div>
+    
   );
 }
 
