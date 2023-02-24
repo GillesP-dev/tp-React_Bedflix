@@ -11,3 +11,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.accueil {
+  background-image: url(./images/Rectangle4.png);
+  background-size: cover;
+  height: 100vh;
+}

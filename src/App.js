@@ -7,6 +7,7 @@ import { Routes,Route } from 'react-router-dom';
 import PagesAccueil from './composant/pagesAccueil'
 import Navbarre from './composant/navbarre';
 import RequetteProvider from './composant/Requette';
+import Films from './composant/films';
 
 
 
@@ -21,6 +22,8 @@ function App() {
         <Routes>
         <Route exact path="/" element={<PagesAccueil/>}/>
         <Route  path="/Series" element={<Series/>}/>
+        <Route  path="/films" element={<Films/>}/>
+        
         </Routes>
       </RequetteProvider>
       

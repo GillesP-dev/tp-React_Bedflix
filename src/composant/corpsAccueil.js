@@ -1,10 +1,14 @@
-import React from "react";
+import React,{useState} from "react";
 import Carrousel from "./carrousel";
 
 function CorpsAccueil(){
+const [background, setBackground] = useState("accueil");
+
+
+
     return(
         <>
-        <div className="corps">
+        <div className={background}>
         
         </div>
         

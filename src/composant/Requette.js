@@ -5,6 +5,7 @@ export const PosterContext = createContext("");
 const RequetteProvider = (props) => {
     const [datarequete, setdatarequete] = useState({movies:[{poster: "https://pictures.betaseries.com/films/affiches/original/119053.jpg"},{title: "Thor: Love and Thunder"}]});
     const [titreData, setTitreData] = useState("")
+    const [idImage, setIdImage] = useState("")
     
     useEffect(() =>{
     
@@ -18,10 +19,10 @@ const RequetteProvider = (props) => {
 
 return(<>
 
-<PosterContext.Provider value= {{datarequete, setTitreData, setdatarequete}}>
+<PosterContext.Provider value= {{datarequete, setTitreData, setdatarequete, idImage, setIdImage}}>
                     {props.children}
                 </PosterContext.Provider>
-    {console.log(titreData)}{console.log(datarequete)}
+    
                 </>
 )
 }

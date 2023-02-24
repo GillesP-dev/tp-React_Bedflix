@@ -9,7 +9,7 @@ function PagesAccueil(){
 
 return(
     
-      <><CorpsAccueil />
+      <><CorpsAccueil/>
       <Carrousel /></>
 
 )
